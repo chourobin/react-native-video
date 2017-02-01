@@ -138,6 +138,7 @@ static NSString *const playbackRate = @"rate";
 {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
   [self removePlayerItemObservers];
+  [self removePlayerLayer];
   [_player removeObserver:self forKeyPath:playbackRate context:nil];
 }
 
